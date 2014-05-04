@@ -1,11 +1,10 @@
-grunt-diff-copy
+grunt-diff-copy [![Build Status](https://travis-ci.org/simshanith/grunt-diff-copy.svg?branch=master)](https://travis-ci.org/simshanith/grunt-diff-copy) [![devDependency Status](https://david-dm.org/simshanith/grunt-diff-copy/dev-status.svg)](https://david-dm.org/simshanith/grunt-diff-copy#info=devDependencies)
 ===============
 
 Compares source &amp; destination files before calling [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy).
 
 Currently compatible with grunt-contrib-copy@0.5.0.
 
-[![Build Status](https://travis-ci.org/simshanith/grunt-diff-copy.svg?branch=master)](https://travis-ci.org/simshanith/grunt-diff-copy)
 
 Tests & much of the Gruntfile taken from `grunt-contrib-copy`. Extensive tests of `grunt-diff-copy`'s actual functionality are planned.
 
