@@ -5,6 +5,8 @@ Compares source &amp; destination files before calling [grunt-contrib-copy](http
 
 Currently compatible with grunt-contrib-copy@0.5.0.
 
+[![Build Status](https://travis-ci.org/simshanith/grunt-diff-copy.svg?branch=master)](https://travis-ci.org/simshanith/grunt-diff-copy)
+
 Tests & much of the Gruntfile taken from `grunt-contrib-copy`. Extensive tests of `grunt-diff-copy`'s actual functionality are planned.
 
 ## Overview
