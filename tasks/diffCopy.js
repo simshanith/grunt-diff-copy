@@ -1,10 +1,9 @@
 /*
- * grunt-contrib-copy
- * http://gruntjs.com/
+ * grunt-diff-copy
  *
- * Copyright (c) 2014 Chris Talkington, contributors
+ * Copyright (c) 2014 Shane Daniel, contributors
  * Licensed under the MIT license.
- * https://github.com/gruntjs/grunt-contrib-copy/blob/master/LICENSE-MIT
+ * https://github.com/simshanith/grunt-diff-copy/blob/master/LICENSE-MIT
  */
 
 module.exports = function(grunt) {
