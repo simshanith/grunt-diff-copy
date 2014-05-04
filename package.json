@@ -1,13 +1,30 @@
 {
   "name": "grunt-diff-copy",
-  "version": "0.0.0",
   "description": "Compares source & destination files before calling grunt-contrib-copy.",
-  "scripts": {
-    "test": "grunt"
+  "version": "0.1.0",
+  "homepage": "https://github.com/simshanith/grunt-diff-copy",
+  "author": {
+    "name": "Shane Daniel",
+    "url": "http://simloovoo.com"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/simshanith/grunt-diff-copy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simshanith/grunt-diff-copy/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/gruntjs/grunt-contrib-copy/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.2",
@@ -23,10 +40,8 @@
   "keywords": [
     "gruntplugin"
   ],
-  "author": "Shane Daniel",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/simshanith/grunt-diff-copy/issues"
-  },
-  "homepage": "https://github.com/simshanith/grunt-diff-copy"
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ]
 }
