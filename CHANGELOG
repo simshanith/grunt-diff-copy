@@ -1,0 +1,4 @@
+v0.1.0:
+  date: 2014-05-03
+  changes:
+    - Refactored from grunt-contrib-copy into individual repo.
