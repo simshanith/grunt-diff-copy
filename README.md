@@ -5,6 +5,7 @@ Compares source &amp; destination files before calling [grunt-contrib-copy](http
 
 Currently compatible with grunt-contrib-copy@0.5.0.
 
+[![NPM](https://nodei.co/npm/grunt-diff-copy.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-diff-copy/)
 
 Tests & much of the Gruntfile taken from `grunt-contrib-copy`. Extensive tests of `grunt-diff-copy`'s actual functionality are planned.
 
