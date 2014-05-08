@@ -7,6 +7,8 @@ Currently compatible with grunt-contrib-copy@0.5.0.
 
 [![NPM](https://nodei.co/npm/grunt-diff-copy.png?downloads=true&stars=true)](https://nodei.co/npm/grunt-diff-copy/)
 
+![Example Output](https://raw.github.com/simshanith/grunt-diff-copy/master/grunt-diff-copy-output.png)
+
 Tests & much of the Gruntfile taken from `grunt-contrib-copy`. Extensive tests of `grunt-diff-copy`'s actual functionality are planned.
 
 ## Overview
