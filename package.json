@@ -1,10 +1,11 @@
 {
   "name": "grunt-diff-copy",
   "description": "Compares source & destination files before calling grunt-contrib-copy.",
-  "version": "0.1.1",
+  "version": "0.1.2-SNAPSHOT",
   "homepage": "https://github.com/simshanith/grunt-diff-copy",
   "author": {
     "name": "Shane Daniel",
+    "email": "simrpgman@gmail.com",
     "url": "http://simloovoo.com"
   },
   "repository": {
@@ -26,12 +27,13 @@
   "scripts": {
     "test": "grunt test --verbose"
   },
+  "main": "tasks/diffCopy.js",
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-nodeunit": "~0.3.3",
+    "grunt": "~0.4.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
-    "grunt": "~0.4.0"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.0"
   },
   "peerDependencies": {
     "grunt-contrib-copy": "~0.5.0",
