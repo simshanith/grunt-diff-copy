@@ -9,31 +9,51 @@
 module.exports = function(grunt) {
   'use strict';
 
-
+  var _ = require('lodash');
   // store original values in private variable.
   var originalConfig;
   var configKey;
 
-  grunt.registerTask('diffCopy', 'Copy only if changed.', function() {
-    var taskChain = grunt.util._.first(this.args);
-    var files = checkCopies(taskChain);
+  function targetJoiner(taskName) {
+    return function(target) {
+      return [taskName, target].join(':');
+    };
+  }
 
+  var copyTarget     = targetJoiner('copy');
+  var diffCopyTarget = targetJoiner('diffCopy');
+
+  var task = {
+    name: 'diffCopy',
+    desc: 'Copy only if changed.'
+  };
+
+  grunt.registerTask('diffCopy', 'Copy only if changed.', function() {
+    // grab target from args.
+    var taskChain = _.first(this.args);
+
+    var targets;
     if( !taskChain ) {
-      grunt.task.run(grunt.util._.map(grunt.util._.keys(grunt.config('copy')), function(target) {
-        return 'diffCopy:'+target;
-      }));
+      // Multitask emulation.
+      targets = _.omit(_.keys(grunt.config('copy')), 'options');
+      grunt.task.run(_.map(targets, diffCopyTarget));
       return;
     }
+
+    var files = checkCopies(taskChain);
 
     configKey = 'copy.'+taskChain+'.files';
     originalConfig = grunt.config(configKey);
 
-
     if( files && files.length ) {
+      // Set config to modified files only.
       grunt.config(configKey, files);
-      grunt.task.run('copy:'+taskChain);
+      // Run the task.
+      grunt.task.run(copyTarget(taskChain));
+      // Reset the config.
       grunt.task.run('diffCopy:__postrun');
     } else {
+      // Display a message about the omission.
       grunt.log.warn('No files changed; copy:%s not run.', taskChain);
     }
 
@@ -45,7 +65,7 @@ module.exports = function(grunt) {
   });
 
   function checkCopies(target) {
-    var confPath = grunt.util._.compact(['copy', target]).join('.');
+    var confPath = ['copy', target].join('.');
     grunt.config.requires(confPath);
     var conf = grunt.config(confPath);
 
@@ -61,8 +81,8 @@ module.exports = function(grunt) {
     }
 
 
-    srcDestPairs = grunt.util._.filter(srcDestPairs, function(pair) {
-      var src = pair && pair.src && grunt.util._.first(pair.src);
+    srcDestPairs = _.filter(srcDestPairs, function(pair) {
+      var src = pair && pair.src && _.first(pair.src);
       var dest = pair && pair.dest;
 
       var srcIsFile = src && grunt.file.isFile(src);
@@ -76,7 +96,7 @@ module.exports = function(grunt) {
       if ( srcIsDir && pair.orig && pair.orig.expand ) {
         if( src === pair.orig.cwd ) {
           srcIsRootDir = true;
-        } else if ( src === grunt.util._.first(pair.orig.src).replace(wildCardRegex, '')) {
+        } else if ( src === _.first(pair.orig.src).replace(wildCardRegex, '')) {
           srcIsRootDir = true; 
         }
       }
@@ -99,7 +119,7 @@ module.exports = function(grunt) {
     });
 
     if( srcDestPairs.length > 0 ) {
-      grunt.log.ok('Changed files: %s', grunt.util._.pluck(srcDestPairs, 'dest').join(' '));
+      grunt.log.ok('Changed files: %s', _.pluck(srcDestPairs, 'dest').join(' '));
     }
 
     return srcDestPairs;
