@@ -1,3 +1,9 @@
+v0.2.0:
+  date: 2014-06-02
+  changes:
+    - Added `lodash` as a dependency; removed deprecated `grunt.util._`.
+    - More documentation and some light refactoring.
+    - Added npmignore.
 v0.1.1:
   date: 2014-05-03
   changes:
