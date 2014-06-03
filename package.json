@@ -1,7 +1,7 @@
 {
   "name": "grunt-diff-copy",
   "description": "Compares source & destination files before calling grunt-contrib-copy.",
-  "version": "0.1.2-SNAPSHOT",
+  "version": "0.1.2",
   "homepage": "https://github.com/simshanith/grunt-diff-copy",
   "author": {
     "name": "Shane Daniel",
