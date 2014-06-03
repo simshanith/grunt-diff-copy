@@ -1,4 +1,4 @@
-grunt-diff-copy [![Build Status](https://travis-ci.org/simshanith/grunt-diff-copy.svg?branch=master)](https://travis-ci.org/simshanith/grunt-diff-copy) [![devDependency Status](https://david-dm.org/simshanith/grunt-diff-copy/dev-status.svg)](https://david-dm.org/simshanith/grunt-diff-copy#info=devDependencies)
+grunt-diff-copy [![Build Status](https://travis-ci.org/simshanith/grunt-diff-copy.svg?branch=master)](https://travis-ci.org/simshanith/grunt-diff-copy) [![Dependency Status](https://david-dm.org/simshanith/grunt-diff-copy.svg)](https://david-dm.org/simshanith/grunt-diff-copy) [![devDependency Status](https://david-dm.org/simshanith/grunt-diff-copy/dev-status.svg)](https://david-dm.org/simshanith/grunt-diff-copy#info=devDependencies)
 ===============
 
 Compares source &amp; destination files before calling [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy).
